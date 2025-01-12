@@ -30,7 +30,7 @@ let formatPage = function (formatedData) {
   for (const element of formatedData) {
     let yearToBeConsidered = filterByYear(element);
 
-    if (yearToBeConsidered == yearOfReading) {
+    if (yearToBeConsidered <= yearOfReading) {
       let currentMonth = element.dateOfReading.substring(5, 7);
       if (currentMonth > prevMonth) {
         skippedMonths = parseInt(currentMonth) - parseInt(prevMonth) - 1;
@@ -62,7 +62,7 @@ const getTopics = function () {
   //fetch(`http://localhost:8080/book-list.json`)
   // For testing with local Json. `https://raw.githubusercontent.com/jeeves1618/Spring-Learnings/master/Librarian%202.0/src/main/resources/book-list.json`
   fetch(
-    `https://raw.githubusercontent.com/jeeves1618/Spring-Learnings/master/Librarian%202.0/src/main/resources/read-list.json`
+    `https://raw.githubusercontent.com/nithyaluv2code/reads/refs/heads/master/read-list.json`
   )
     .then(function (ajaxResponse) {
       //ajaxResponse can't be read since it is a readstream.
@@ -77,9 +77,9 @@ const getTopics = function () {
       //Sorting based on date last read and passing it to format page function
       formatPage(
         formatedData.sort((b1, b2) =>
-          b1.dateOfReading < b2.dateOfReading
+          b1.dateOfReading > b2.dateOfReading
             ? -1
-            : b1.dateOfReading > b2.dateOfReading
+            : b1.dateOfReading < b2.dateOfReading
             ? 1
             : 0
         )
