@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IM+Fell+English+SC&family=Inconsolata&family=Roboto+Slab&family=Libre+Baskerville&family=Merriweather:wght@700&family=Lora&family=Mukta&family=Oxygen&family=Tiro+Kannada&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="/img/icon.jpg" />
+    <link rel="stylesheet" href="css/reads.css" />
+  </head>
+  <body>
+    <h1>Your search results</h1>
+    <nav class="navbar navbar-dark bg-black">
+      <div class="container-fluid">
+        <div>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              id="search-input"
+              type="search"
+              placeholder="Search the library for titles, subjects etc."
+              aria-label="Search"
+            />
+            <button class="btn btn-dark" id="search-button" type="reset">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <ol id="book-list"></ol>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" src="js/results.js"></script>
+</html>

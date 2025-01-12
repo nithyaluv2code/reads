@@ -1,0 +1,238 @@
+body {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.25em;
+}
+
+ol {
+  margin-left: 1.5%;
+}
+h1 {
+  padding-top: 2rem;
+  text-align: center;
+  background-color: rgb(167, 1, 78);
+  color: white;
+  font-family: "Inconsolata", monospace;
+  font-weight: 800;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  margin-bottom: 0.1rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  list-style-type: none; /* Remove default marker */
+  margin: 0.25rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+ol {
+  counter-reset: list-counter; /* Initialize the counter */
+}
+
+li::before {
+  counter-increment: list-counter; /* Increment counter for each <li> */
+  content: counter(list-counter) "."; /* Display the counter followed by a dot */
+  width: 2rem; /* Set a fixed width to align numbers */
+  text-align: right; /* Right-align the numbers within the width */
+  display: inline-block; /* Ensure width and alignment work */
+  color: black; /* Customize color if needed */
+}
+a {
+  color: #000;
+  text-decoration: none; /* no underline */
+}
+hr {
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+  color: #000;
+  height: px;
+  background-color: #000;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7%;
+}
+.glyphicon {
+  font-size: 0.7em;
+  margin-right: 0.2em;
+}
+#prev-year {
+  float: left;
+  margin-left: 4%;
+  font-weight: bold;
+}
+#next-year {
+  float: right;
+  margin-right: 4%;
+  font-weight: bold;
+}
+
+#home-link {
+  margin: 0 auto;
+  font-weight: bold;
+}
+#home-link-div {
+  text-align: center;
+}
+.navbar {
+  background-color: rgb(103, 101, 101);
+  font-size: 2rem;
+  color: white;
+}
+.navbar-dark {
+  color: white;
+}
+.btn-outline-white {
+  color: #212529;
+  outline: white;
+  border: white;
+}
+.btn-dark {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+.nav-link {
+  color: white;
+}
+.navbar-toggler {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#chart {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.highlight-sup {
+  vertical-align: super;
+  color: white;
+  background-color: rgb(22, 99, 6);
+  padding: 5px 5px;
+  border-radius: 50%; /* Making it oval */
+  font-size: 0.75em; /* Same size as main text */
+}
+
+.glyphicon-color {
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 1.5em;
+}
+
+/********** Extra Large devices only **********/
+@media (min-width: 1200px) {
+  body {
+    font-size: 2em;
+  }
+
+  ol {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #month_image {
+    width: 5rem;
+  }
+  li::before {
+    margin-right: 2rem; /* Space between number and text */
+  }
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 2em;
+  }
+
+  ol {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #month_image {
+    width: 4rem;
+  }
+  li::before {
+    margin-right: 1rem; /* Space between number and text */
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 576px) and (max-width: 991px) {
+  body {
+    font-size: 2em;
+  }
+
+  ol {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #month_image {
+    width: 4rem;
+  }
+
+  #chart {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  li::before {
+    margin-right: 1.75rem; /* Space between number and text */
+  }
+}
+/********** Small devices only **********/
+@media (min-width: 432px) and (max-width: 575px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  ol {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  #month_image {
+    width: 3rem;
+  }
+
+  #chart {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  li::before {
+    margin-right: 1rem; /* Space between number and text */
+  }
+}
+
+/********** extra Small devices only **********/
+@media (max-width: 431px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  ol {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  #month_image {
+    width: 3rem;
+  }
+
+  #chart {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  li::before {
+    margin-right: 0.5rem; /* Space between number and text */
+  }
+}
